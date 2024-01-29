@@ -1,0 +1,1256 @@
+{
+	"info": {
+		"_postman_id": "3887d6bf-d279-483c-be82-55b7df8c9c6d",
+		"name": "BlogCommunity",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26053342"
+	},
+	"item": [
+		{
+			"name": "dashboard",
+			"item": [
+				{
+					"name": "users",
+					"item": [
+						{
+							"name": "index",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{dashboard}}users?filter[item]=admin",
+									"host": [
+										"{{dashboard}}users"
+									],
+									"query": [
+										{
+											"key": "filter[item]",
+											"value": "admin"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "user",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{dashboard}}users/1",
+									"host": [
+										"{{dashboard}}users"
+									],
+									"path": [
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "edit",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "admin",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "admin@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "admin",
+											"type": "text"
+										},
+										{
+											"key": "photo",
+											"type": "file",
+											"src": "/E:/Projects/NextSideBlogCommunity/public/images/icons/instagram.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{dashboard}}users/edit/1",
+									"host": [
+										"{{dashboard}}users"
+									],
+									"path": [
+										"edit",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "rana",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "rana@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "user",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "rana123$%",
+											"type": "text"
+										},
+										{
+											"key": "photo",
+											"type": "file",
+											"src": []
+										}
+									]
+								},
+								"url": {
+									"raw": "{{dashboard}}users/add",
+									"host": [
+										"{{dashboard}}users"
+									],
+									"path": [
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "rana",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "rana@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "user",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "rana123$%",
+											"type": "text"
+										},
+										{
+											"key": "password_confirmation",
+											"value": "rana123$%",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{dashboard}}users/3",
+									"host": [
+										"{{dashboard}}users"
+									],
+									"path": [
+										"3"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "categories",
+					"item": [
+						{
+							"name": "index",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{dashboard}}categories?filter[item]=",
+									"host": [
+										"{{dashboard}}categories"
+									],
+									"query": [
+										{
+											"key": "filter[item]",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "category",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{dashboard}}categories/2",
+									"host": [
+										"{{dashboard}}categories"
+									],
+									"path": [
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "cats",
+											"type": "text"
+										},
+										{
+											"key": "content",
+											"value": "cats",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/myName/Pictures/FolderImages/chess/istockphoto-1395539260-170667a (1).webp"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{dashboard}}categories/add",
+									"host": [
+										"{{dashboard}}categories"
+									],
+									"path": [
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "edit",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "cats",
+											"type": "text"
+										},
+										{
+											"key": "content",
+											"value": "show cats",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/myName/Pictures/FolderImages/chess/istockphoto-1395539260-170667a (1).webp"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{dashboard}}categories/edit/2",
+									"host": [
+										"{{dashboard}}categories"
+									],
+									"path": [
+										"edit",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "one",
+											"type": "text"
+										},
+										{
+											"key": "content",
+											"value": "user",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/myName/Pictures/FolderImages/chess/istockphoto-1464364581-170667a.webp"
+										},
+										{
+											"key": "parent",
+											"value": "2\n",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{dashboard}}categories/2",
+									"host": [
+										"{{dashboard}}categories"
+									],
+									"path": [
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "posts",
+					"item": [
+						{
+							"name": "index",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{dashboard}}posts?filter[item]=admin",
+									"host": [
+										"{{dashboard}}posts"
+									],
+									"query": [
+										{
+											"key": "filter[item]",
+											"value": "admin"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "post",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{dashboard}}posts/2",
+									"host": [
+										"{{dashboard}}posts"
+									],
+									"path": [
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/myName/Pictures/FolderImages/dogs/AdobeStock_170844315_Preview.jpeg"
+										},
+										{
+											"key": "category_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "user_id",
+											"value": "11",
+											"type": "text"
+										},
+										{
+											"key": "title",
+											"value": "cat twoo",
+											"type": "text"
+										},
+										{
+											"key": "content",
+											"value": "cat post twoo",
+											"type": "text"
+										},
+										{
+											"key": "smallDesc",
+											"value": "cat post twoo",
+											"type": "text"
+										},
+										{
+											"key": "tags",
+											"value": "cat post twoo",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{dashboard}}posts/add",
+									"host": [
+										"{{dashboard}}posts"
+									],
+									"path": [
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "edit",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/E:/Projects/NextSideBlogCommunity/public/images/icons/linkedin.png"
+										},
+										{
+											"key": "category_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "title",
+											"value": "cat  twoo",
+											"type": "text"
+										},
+										{
+											"key": "content",
+											"value": "cat  twoo post",
+											"type": "text"
+										},
+										{
+											"key": "smallDesc",
+											"value": "cat  twoo post",
+											"type": "text"
+										},
+										{
+											"key": "tags",
+											"value": "cat  twoo post",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{dashboard}}posts/edit/11",
+									"host": [
+										"{{dashboard}}posts"
+									],
+									"path": [
+										"edit",
+										"11"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "one",
+											"type": "text"
+										},
+										{
+											"key": "content",
+											"value": "user",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/myName/Pictures/FolderImages/chess/istockphoto-1464364581-170667a.webp"
+										},
+										{
+											"key": "parent",
+											"value": "2\n",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{dashboard}}posts/1",
+									"host": [
+										"{{dashboard}}posts"
+									],
+									"path": [
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "statistics",
+					"item": [
+						{
+							"name": "showGlobalStatistics",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{dashboard}}statistics/showGlobalStatistics",
+									"host": [
+										"{{dashboard}}statistics"
+									],
+									"path": [
+										"showGlobalStatistics"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "AdminNotifications",
+					"item": [
+						{
+							"name": "index",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{dashboard}}admin/notifications",
+									"host": [
+										"{{dashboard}}admin"
+									],
+									"path": [
+										"notifications"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "notification",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{dashboard}}admin/notifications/notification/7ad7b09e-4421-4c50-984f-9c65ed4b7459",
+									"host": [
+										"{{dashboard}}admin"
+									],
+									"path": [
+										"notifications",
+										"notification",
+										"7ad7b09e-4421-4c50-984f-9c65ed4b7459"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "count Unread Notifications",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{dashboard}}admin/notifications/countUnreadNotifications",
+									"host": [
+										"{{dashboard}}admin"
+									],
+									"path": [
+										"notifications",
+										"countUnreadNotifications"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Unread Notifications",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{dashboard}}admin/notifications/unreadNotifications",
+									"host": [
+										"{{dashboard}}admin"
+									],
+									"path": [
+										"notifications",
+										"unreadNotifications"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "mark All notifications As Read",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{dashboard}}admin/notifications/markAllAsRead",
+									"host": [
+										"{{dashboard}}admin"
+									],
+									"path": [
+										"notifications",
+										"markAllAsRead"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "mark As Read By Id",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{dashboard}}admin/notifications/markAsReadById/6f03dfbd-fe6b-4bd2-8119-e43dc8579e2b",
+									"host": [
+										"{{dashboard}}admin"
+									],
+									"path": [
+										"notifications",
+										"markAsReadById",
+										"6f03dfbd-fe6b-4bd2-8119-e43dc8579e2b"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete all notifications",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{dashboard}}admin/notifications/deleteAll",
+									"host": [
+										"{{dashboard}}admin"
+									],
+									"path": [
+										"notifications",
+										"deleteAll"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete notification By Id",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYTdkMjI2N2VjZjBkM2NmYmZjMzRkODg3YjdjODI5ZWU5ZWMxNjQzNzM4YzhhNjlhNmVkNjgzN2UyMjRkN2UxY2EzMTVlNzRkOGZmYzJiNGIiLCJpYXQiOjE3MDE2MzA0MTkuODAyNzg5LCJuYmYiOjE3MDE2MzA0MTkuODAyNzk2LCJleHAiOjE3MTc0NDE2MTkuNTU5Nzc5LCJzdWIiOiIyMyIsInNjb3BlcyI6W119.Bd-8VlsKADFwCoD44yBllY9qtSxhEnMmwO9zNK3oC3hqDchDI_jpveMAnfv0PXSEmbgPkXWAiFne7zKh1t9HmoaJ_e28VfqwpYDKtQv1Aw88_ZMsnCmGxaPaopT2L9hLpN3ARVfrEZEX8d65ujv3AvY4AtiKkb0Zqh0nljhMcgFc3D9O2dA5H0vSe6a8DyxRgdZcL_ECqPkYqKkUjUyKGeE3szgCp8DXwoU-qfSoimIeJGSK9EvRu8nB4bzFvEA5DrPotm26C8FFYJMwwZS9wp4qtFfBca3Eg8UKamL83SkgN5pZ_tAOq3YjwZvdKmPsHWTvemM8XVl92Pky0C0xyVTnkEJtNk_JjJG0A007QQfmc-DPRAoqvhJ0Uk76xwtMr9pMlpJKXCJeuj5WWCdou4L_c4NvgMIvoew8-ISmAQ05USjdms-rucnOtijHZpwUlBrxZDT9T1vMwAjPAAc7O0L_nRb_VI0-cgYB5B1SliyTLLnSXMI0BmZI-t0ReWwlazBE4fyQqNezvl27L9GufESQR_eaBo7vA3tXSvRlP7_6k6xTjIYCbZypJvB95DpFgZZr-PZOY1kNylftnnwuyIyERPfi8mktC1qa-Lncfhmsg0AJW0heux8Yjj-JwPVIw-agkhG2kOroXzFq7ru1QbFMl_KSVdpLzlw2Q2JAu_Y",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{dashboard}}admin/notifications/deleteById/6f03dfbd-fe6b-4bd2-8119-e43dc8579e2b",
+									"host": [
+										"{{dashboard}}admin"
+									],
+									"path": [
+										"notifications",
+										"deleteById",
+										"6f03dfbd-fe6b-4bd2-8119-e43dc8579e2b"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "admin@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "admin123$%",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{auth}}login",
+							"host": [
+								"{{auth}}login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "sami1",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "sami1@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "sami123$%",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "sami123$%",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{auth}}register",
+							"host": [
+								"{{auth}}register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "website",
+			"item": [
+				{
+					"name": "likes",
+					"item": [
+						{
+							"name": "interact",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "type",
+											"value": "like",
+											"type": "text"
+										},
+										{
+											"key": "post_id",
+											"value": "11",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{website}}likes/interact",
+									"host": [
+										"{{website}}likes"
+									],
+									"path": [
+										"interact"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "comments",
+					"item": [
+						{
+							"name": "add",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "content",
+											"value": "hello",
+											"type": "text"
+										},
+										{
+											"key": "post_id",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{website}}comments/add",
+									"host": [
+										"{{website}}comments"
+									],
+									"path": [
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "edit",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "content",
+											"value": "by by by",
+											"type": "text"
+										},
+										{
+											"key": "post_id",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{website}}comments/5",
+									"host": [
+										"{{website}}comments"
+									],
+									"path": [
+										"5"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{website}}comments/1",
+									"host": [
+										"{{website}}comments"
+									],
+									"path": [
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "comment",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{website}}comments/comment/5",
+									"host": [
+										"{{website}}comments"
+									],
+									"path": [
+										"comment",
+										"5"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "categories",
+					"item": [
+						{
+							"name": "index",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{website}}categories?filter[item]=admin",
+									"host": [
+										"{{website}}categories"
+									],
+									"query": [
+										{
+											"key": "filter[item]",
+											"value": "admin"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "category",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{website}}categories/2",
+									"host": [
+										"{{website}}categories"
+									],
+									"path": [
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "posts",
+					"item": [
+						{
+							"name": "index",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{website}}posts?filter[item]=admin",
+									"host": [
+										"{{website}}posts"
+									],
+									"query": [
+										{
+											"key": "filter[item]",
+											"value": "admin"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getPostWithLikesDislikesAndComments",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{website}}posts/getPostWithLikesDislikesAndComments/3",
+									"host": [
+										"{{website}}posts"
+									],
+									"path": [
+										"getPostWithLikesDislikesAndComments",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getPopularPosts",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{website}}posts/getPopularPosts",
+									"host": [
+										"{{website}}posts"
+									],
+									"path": [
+										"getPopularPosts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "post",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{website}}posts/1",
+									"host": [
+										"{{website}}posts"
+									],
+									"path": [
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "user",
+					"item": [
+						{
+							"name": "user",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{website}}user",
+									"host": [
+										"{{website}}user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "edit",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "admin",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "admin@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "admin12345",
+											"type": "text"
+										},
+										{
+											"key": "photo",
+											"type": "file",
+											"src": "/C:/Users/myName/Downloads/406773045_1919627658432977_9011432505756766611_n.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{website}}user/edit",
+									"host": [
+										"{{website}}user"
+									],
+									"path": [
+										"edit"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "writers",
+					"item": [
+						{
+							"name": "index",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{website}}writers?filter[item]=",
+									"host": [
+										"{{website}}writers"
+									],
+									"query": [
+										{
+											"key": "filter[item]",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "writer",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{website}}writers/12",
+									"host": [
+										"{{website}}writers"
+									],
+									"path": [
+										"12"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "global",
+			"item": [
+				{
+					"name": "current user Auth",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{global}}auth",
+							"host": [
+								"{{global}}auth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "settings",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{global}}settings",
+							"host": [
+								"{{global}}settings"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNjBlNWY2N2RiODFkNGIyNzAyNWI1MjA0N2RjZTc2OWZjODA5ODVmNDg4ZjhiYTBiODA1OTQyNzQ2NjkyNzg4OWM4YzlkMGZhOTMzM2I0N2MiLCJpYXQiOjE3MDYxMTE1MTEuNTk3NjY2LCJuYmYiOjE3MDYxMTE1MTEuNTk3NjcyLCJleHAiOjE3MjE4MzYzMTEuMzk3NTY5LCJzdWIiOiIxMSIsInNjb3BlcyI6W119.e2vVDTz_5KqS_0YtfHsFOERndqi0_fwQWq7o_bOW5M-SP0NA2BTWVBpRywyD764cKywFA7C8xf4p6IEU3uXtuP7ATyi_UYMLlh5e179uR6baLwzzr9IU-1uaBsx7qLt4xLCPfc0cJz9g1KqnJRN1ZZDCvaRSzuokyOYn1t5tRNTrCZHDEcRu4wF7TetS4bb4gaHWJ9q_ZfsKGNhmLVYYcKS1acKPYc3S4ecGCMpN-l2evtUWvDh076bTq3nvogzCITLpAOeJC_F7q0szR88OKUYJ9KVCceMR65HrYYa5_XJ4F2d02PIBUusx1OWdYlBkSbbcPPrl_QBsS8FC_sgKzyFNaS-eJ7Snzdp7aBsDKliejWGdT6OhZ8J9DLoSJ06t2WJcXufDqFAcyIQBIoFco0eDnij7oympeG-QAMAODxTOV7MTHeVSViatLWG0M-CI9CkwXNSCa4jqpVPSizNnSnZXJK0S_V_AHnTDiycLPA2hNtoAuxN4NaJ0ZZ__uhYSZ6KHSEZCne5KVWNjr-7wN10qJkhDFud_hdWif_MuwTg4vNVpCKgcDgZhvFGaqHCUFpTdReOXdnd_oYGexX1pvZlJeUJGlKQOXBai2mk6PdAcSVtnvD3xh0gq7CCs5_o869X0k_ROzVW-uCeMpEHgw1D3pinE8cqm0wXULnbVoDs",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "dashboard",
+			"value": "http://127.0.0.1:8000/api/dashboard/",
+			"type": "string"
+		},
+		{
+			"key": "auth",
+			"value": "http://127.0.0.1:8000/api/",
+			"type": "string"
+		},
+		{
+			"key": "website",
+			"value": "http://127.0.0.1:8000/api/website/",
+			"type": "string"
+		},
+		{
+			"key": "global",
+			"value": "http://127.0.0.1:8000/api/global/",
+			"type": "string"
+		}
+	]
+}
